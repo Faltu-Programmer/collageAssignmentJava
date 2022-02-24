@@ -1,3 +1,9 @@
+/*
+    5. Create a class called Board that contains two instance variables length 
+    and width of integer type and a void method for calculating surface area 
+    of the board. Use them from main method declared in different class.
+    (take input using command line argument).
+*/
 package AssignPkg.Assignment_2;
 
 public class Board
@@ -5,12 +11,22 @@ public class Board
     private int m_length;
     private int m_width;
     
-    public Board () {}
+    public Board () 
+    {
+        setLength(0);
+        setWidth(0);
+    }
     public Board (int t_valueL, int t_valueW)
     {
         setLength(t_valueL);
         setWidth(t_valueW);
     }
+    public Board (Board refObj) 
+    {
+        setLength(refObj.m_length);
+        setWidth(refObj.m_width);
+    }
+    
     public final int getLength ()
     {
         return m_length;
