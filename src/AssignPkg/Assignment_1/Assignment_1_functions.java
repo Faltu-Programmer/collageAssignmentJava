@@ -60,20 +60,44 @@ public class Assignment_1_functions
     */
     public final String[] sort (String [] t_arg)
     {
+        int tmpLen = t_arg.length;
+        
+        int[] tmpArg = new int[tmpLen];
+        
+        int itr;
+        /// converting all string value to int value . tmpArg[] <-- t_arg[]
+        for(itr = 0; itr < tmpLen; ++itr)
+        {
+            tmpArg[itr] = Integer.parseInt(t_arg[itr]);
+        }
+        
+        /// sorting the integer array namely tmpArg[]
+        for(int i = 0; i < tmpLen-1; ++i)
+        {
+            for(int j = i+1; j < tmpLen; ++j)
+            {
+                if(tmpArg[i] > tmpArg[j])
+                {
+                    int tmpVar = tmpArg[i];
+                    tmpArg[i] = tmpArg[j];
+                    tmpArg[j] = tmpVar;
+                }
+            }
+        }
+        
+        /// converting all int value to string value .   t_arg[] <-- tmpArg[]
+        for(itr = 0; itr < tmpLen; ++itr)
+        {
+            t_arg[itr] = String.valueOf(tmpArg[itr]);
+        }
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+       /// showing the sorted array tmpArg[]
+       for(itr = 0; itr < tmpLen; ++itr)
+        {
+            System.out.print(tmpArg[itr] + " ");
+        }
+        System.out.println();
         return t_arg;
     }
     
