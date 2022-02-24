@@ -1,3 +1,8 @@
+/*
+    6.Write a java program to find out the multiplication of two complex number
+    (take input using Scanner class).
+
+*/
 package AssignPkg.Assignment_2;
 
 public class multiplyComplexNumber
@@ -7,7 +12,8 @@ public class multiplyComplexNumber
     
     public multiplyComplexNumber () 
     { 
-        
+        setReal(0);
+        setImg(0);
     }
     public multiplyComplexNumber (int t_real, int t_img) 
     { 
@@ -37,4 +43,5 @@ public class multiplyComplexNumber
     {
         m_img = t_img;
     }
+    
 }

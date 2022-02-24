@@ -11,12 +11,22 @@ public class Board
     private int m_length;
     private int m_width;
     
-    public Board () {}
+    public Board () 
+    {
+        setLength(0);
+        setWidth(0);
+    }
     public Board (int t_valueL, int t_valueW)
     {
         setLength(t_valueL);
         setWidth(t_valueW);
     }
+    public Board (Board refObj) 
+    {
+        setLength(refObj.m_length);
+        setWidth(refObj.m_width);
+    }
+    
     public final int getLength ()
     {
         return m_length;
