@@ -7,7 +7,7 @@ public class Assignment_1_functions
         1. Write a JAVA Program of Sum of Series for a given x and n 
             (1+x+x2+x3+x4+……up to nth terms)
     */
-    public int sumOfSeries (int t_x, int t_n)
+    public final int sumOfSeries (int t_x, int t_n)
     {
         if(t_x <= 0 || t_n <= 0)
         {
@@ -93,6 +93,7 @@ public class Assignment_1_functions
         
         
        /// showing the sorted array tmpArg[]
+       System.out.print("the sort is assending order->  ");
        for(itr = 0; itr < tmpLen; ++itr)
         {
             System.out.print(tmpArg[itr] + " ");
