@@ -30,7 +30,7 @@ public class multiplyComplexNumber
     {
         return m_real;
     }
-    public final void setReal (int t_real)
+    private void setReal (int t_real)
     {
         m_real = t_real;
     }
@@ -39,9 +39,55 @@ public class multiplyComplexNumber
     {
         return m_img;
     }
-    public final void setImg (int t_img)
+    private void setImg (int t_img)
     {
         m_img = t_img;
+    }
+    public void multiply (int t_real, int t_img)
+    {
+        calculationOfMultiplication (t_real, t_img);
+    }
+    public void multiply ( multiplyComplexNumber t_refObj )
+    {
+        calculationOfMultiplication (t_refObj.m_real, t_refObj.m_img);
+    }
+    
+    private void calculationOfMultiplication (int t_real, int t_img)
+    {
+        int a = getReal ();
+        int bi = getImg ();
+        int c = t_real;
+        int di = t_img;
+        
+        int tmpRoot1, tmpRoot2;
+        
+        /// ==> (a+bi) * (c + di) 
+        /// ==> ac+adi+bci-bd;
+        /// ==> (ac-bd)+(adi+bci)
+        
+        int ac = a*c;
+        int adi = a*di;
+        int bci = bi*c;
+        int bdi2 = -(bi*di);
+        
+        tmpRoot1 = ac + bdi2;
+        tmpRoot2 = (adi+bci);
+        
+        show (tmpRoot1, tmpRoot2);
+        setReal (tmpRoot1);
+        setImg (tmpRoot2);
+    }
+    
+    public final void show ()
+    {
+        int t_real = getReal ();
+        int t_img = getImg ();
+        System.out.println("Result is " + t_real + "" + (t_img > 0 ? ("+" + t_img + "i") : (t_img + "i")));
+    }
+    
+    public void show (int t_real, int t_img)
+    {
+        System.out.println("Result is " + t_real + "" + (t_img > 0 ? ("+" + t_img + "i") : (t_img + "i")));
     }
     
 }
