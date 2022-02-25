@@ -1,23 +1,41 @@
 package MainClass;
 
-import AssignPkg.Assignment_2.multiplyComplexNumber;
+/// import AssignPkg.Assignment_2.multiplyComplexNumber;
 /// import AssignPkg.Assignment_1.Assignment_1_functions;
+import AssignPkg.Assignment_3.BankAccount;
 
 public class Main
 {
     
      public static void main (String [] args)
     {
-        multiplyComplexNumber obj = new multiplyComplexNumber (7, 12);
-        System.out.print("hello world\n");
         
-        obj.multiply(29, 3);
+        /// related to Assignment_3
+        BankAccount refObj = new BankAccount ("Tom&Jerry", 5000);
+        
+        refObj.showAccountDetails();
+        refObj.withdraw(5000);
+        
+        
+        
+        
+        
+        
+        
         
         
         
         
         
         /*
+        /// related to Assignment_2
+        multiplyComplexNumber obj = new multiplyComplexNumber (7, 12);
+        System.out.print("hello world\n");
+        obj.multiply(29, 3);
+        */
+        
+        /*
+        /// related to Assignment_1
         Assignment_1_functions refObj = new Assignment_1_functions ();
         
         String[] a = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
