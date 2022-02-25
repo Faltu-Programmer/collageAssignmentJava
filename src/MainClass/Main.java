@@ -1,10 +1,23 @@
-package AssignPkg.Assignment_1;
+package MainClass;
 
-public class MainClass
+import AssignPkg.Assignment_2.multiplyComplexNumber;
+/// import AssignPkg.Assignment_1.Assignment_1_functions;
+
+public class Main
 {
     
-    public static void main(String[] args)
+     public static void main (String [] args)
     {
+        multiplyComplexNumber obj = new multiplyComplexNumber (7, 12);
+        System.out.print("hello world\n");
+        
+        obj.multiply(29, 3);
+        
+        
+        
+        
+        
+        /*
         Assignment_1_functions refObj = new Assignment_1_functions ();
         
         String[] a = {"1", "2", "3", "4", "5", "6", "7", "8", "9"};
@@ -19,6 +32,6 @@ public class MainClass
         refObj.sort(b);
         refObj.sort(c);
         System.out.println("mone hoy assignment 1 is complete");
+        */
     }
-    
 }
