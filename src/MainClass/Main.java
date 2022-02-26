@@ -1,8 +1,7 @@
 package MainClass;
-
 /// import AssignPkg.Assignment_2.multiplyComplexNumber;
 /// import AssignPkg.Assignment_1.Assignment_1_functions;
-import AssignPkg.Assignment_3.BankAccount;
+/// import AssignPkg.Assignment_3.BankAccount;
 
 public class Main
 {
@@ -10,20 +9,25 @@ public class Main
      public static void main (String [] args)
     {
         
+       
+        
+        
         /// related to Assignment_3
-        BankAccount refObj = new BankAccount ("Tom&Jerry", 5000);
+        /*
+        BankAccount refObj = new BankAccount ("Iron Man", 5000);
         
         refObj.showAccountDetails();
-        refObj.withdraw(5000);
+        refObj.withdraw(1500);
+        refObj.balance();
         
         
-        
-        
-        
-        
-        
-        
-        
+        BankAccount refObj1 = new BankAccount ("Iron woman", 85000);
+        refObj1.showAccountDetails();
+        refObj1.withdraw(50000);
+        refObj1.balance();
+        refObj1.changeAccountType();
+        refObj1.showAccountDetails();
+        */
         
         
         
