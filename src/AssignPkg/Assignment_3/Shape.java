@@ -1,3 +1,9 @@
+/*
+    8. Create a class named Shape. Make Circle, Triangle and Rectangle as 
+    object of the Shape class and calculate their area by concept of method 
+    overloading(take input using scanner class).
+*/
+
 package AssignPkg.Assignment_3;
 
 public class Shape

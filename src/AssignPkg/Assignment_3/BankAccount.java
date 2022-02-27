@@ -21,9 +21,10 @@ package AssignPkg.Assignment_3;
 public class BankAccount
 {
     private final String  m_accountHolderName;
-    private static int m_accountNumber = -1; /// for testing purpose account number take between 100 to 150 means three digits only ..
+    private int m_accountNumber = -1; /// for testing purpose account number take between 100 to 150 means three digits only ..
     private String m_typeOfAccount;  /// 1 type is savings and 2 is current 
     private int m_balance = -1; 
+    private static int m_totalAccount = 100;
     
     public BankAccount () 
     {
@@ -36,15 +37,17 @@ public class BankAccount
     {
        m_accountHolderName = t_depositorName;
         m_typeOfAccount = "Savings";
-        m_balance = t_initialBal;
-        m_accountNumber = (m_accountNumber <= 0)? 100 : ++m_accountNumber;
+        m_balance = (t_initialBal < 0) ? 0 : t_initialBal;
+        m_accountNumber = m_totalAccount; 
+        ++m_totalAccount;
     }
     public BankAccount (String t_depositorName, String t_typeOfAccount, int t_initialBal ) 
     {
        m_accountHolderName = t_depositorName;
-        m_typeOfAccount = t_typeOfAccount;
-        m_balance = t_initialBal;
-        m_accountNumber = (m_accountNumber <= 0)? 100 : ++m_accountNumber;
+        m_typeOfAccount = (t_typeOfAccount.equals("Current")) ? "Current" : "Savings";
+        m_balance = (t_initialBal < 0) ? 0 : t_initialBal;
+        m_accountNumber = m_totalAccount; 
+        ++m_totalAccount;
     }
     /*
     /// this feature can not be implemented beacause one accountHolder can have
@@ -59,15 +62,15 @@ public class BankAccount
     }
     */
    
-    public String getAccountHolderName ()
+    public final String getAccountHolderName ()
     {
         return m_accountHolderName;
     }
-    public int getAccountNumber ()
+    public final int getAccountNumber ()
     {
         return m_accountNumber;
     }
-    public String getTypeOfAccount ()
+    public final String getTypeOfAccount ()
     {
         return m_typeOfAccount;
     }
@@ -81,14 +84,23 @@ public class BankAccount
         m_typeOfAccount = (m_typeOfAccount.equals("Current")) ? "Savings" : "Current";
     }
     
-    public int getBalance ()
+    public final int getBalance ()
     {
         return m_balance;
     }
     private void setBalance (int t_balance)
     {
-        m_balance = (m_balance < 0) ? 0 : t_balance;
+        int tmpBal = getBalance();
+        m_balance = (t_balance <= 0) ? tmpBal : t_balance;
     }
+    
+    public int getTotalAccount ()
+    {
+        return m_totalAccount;
+    }
+    
+    
+    
     
     public void showAccountDetails ()
     {
@@ -104,7 +116,7 @@ public class BankAccount
         /// setBalance( (t_depositeAmmount <= 0) ? getBalance() : t_depositeAmmount);
         if(t_depositeAmmount > 0)
         {
-            setBalance (t_depositeAmmount);
+            setBalance (t_depositeAmmount+getBalance());
             System.out.println("Successfully Deposite \u20B9" + t_depositeAmmount);
         }
     }
@@ -115,7 +127,7 @@ public class BankAccount
         
         if(tmpBalance >= t_withdrawlAmmount)
         {
-            setBalance (tmpBalance-t_withdrawlAmmount);
+            setBalance ((tmpBalance-t_withdrawlAmmount));
             System.out.println("Successfully Withdrawl \u20B9" + t_withdrawlAmmount);
         }
         else
