@@ -19,7 +19,7 @@ public class Shape
     {
         return (t_base*t_height)/2;
     }
-    ///atea of tringle by heron's formula
+    ///area of tringle by heron's formula
     public double area(double t_a, double t_b, double t_c)
     {
         double s = (t_a + t_b + t_c) / 2;
