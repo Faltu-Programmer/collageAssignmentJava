@@ -1,3 +1,9 @@
+/*
+    8. Create a class named Shape. Make Circle, Triangle and Rectangle as 
+    object of the Shape class and calculate their area by concept of method 
+    overloading(take input using scanner class).
+*/
+
 package AssignPkg.Assignment_3;
 
 public class Shape
@@ -13,7 +19,7 @@ public class Shape
     {
         return (t_base*t_height)/2;
     }
-    ///atea of tringle by heron's formula
+    ///area of tringle by heron's formula
     public double area(double t_a, double t_b, double t_c)
     {
         double s = (t_a + t_b + t_c) / 2;
