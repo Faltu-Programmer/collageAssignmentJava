@@ -5,10 +5,6 @@
  */
 package AssignPkg.Assignment_5.Assignment_5_12;
 
-/**
- *
- * @author suman
- */
 public class DemoClass 
 {
     public class InnerClassInsideDemo extends InnerClass 
@@ -73,9 +69,9 @@ public class DemoClass
     public void show ()
     {
         InnerClassInsideDemo tmpObj = getObj();
-        System.out.println("A = " + tmpObj.getA());
-        System.out.println("B = " + tmpObj.getB());
-        System.out.println("C = " + getC ());
+        System.out.print("A = " + tmpObj.getA());
+        System.out.print(" B = " + tmpObj.getB());
+        System.out.println(" C = " + getC ());
     }
     
     

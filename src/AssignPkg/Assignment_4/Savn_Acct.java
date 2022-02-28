@@ -30,7 +30,7 @@ public class Savn_Acct extends Account
         System.out.println("The Account Number is " + getAccountNumber ());
         System.out.println("The Account Type is *" + getTypeOfAccount ());
         System.out.println("The Account Balance is \u20B9" + getAccountBalance ());
-        System.out.print("The Benefits:: Your savings account provides you compound interest and withdrawal facilities\n");
-        System.out.println("The Drawbacks:: Your savings account does not provides cheque book facility");
+        System.out.print("The Benefits::Your ccount provides compound interest and withdrawal facilities\n");
+        System.out.println("The Drawbacks::Your savings account does not provides cheque book facility");
     }
 }
