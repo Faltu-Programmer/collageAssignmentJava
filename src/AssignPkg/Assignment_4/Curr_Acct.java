@@ -33,19 +33,15 @@ public class Curr_Acct extends Account
             if(tmpBalance <= 1000)
             {
                 setAccountBalance ((tmpBalance-t_withdrawlAmmount-100));
-                System.out.println("Due to insufficient Minimum Balance, Service charge \u20B9100 is deducted from your account");
+                System.out.println("Due to insufficient Minimum Balance");
+                System.out.println("Service charge \u20B9100 is deducted from your account");
             }
             else
-            {
                 setAccountBalance ((tmpBalance-t_withdrawlAmmount));
-            }
-            
             System.out.println("Successfully Withdrawl \u20B9" + t_withdrawlAmmount);
         }
         else
-        {
            insufficientBalance ();
-        }
     }
     
     @Override
